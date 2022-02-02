@@ -5,6 +5,7 @@
 
 ### Required for develop:
 - Unity 2021.2.4f1
+- Mac build support (mono)
 - Visual Studio Editor 2.0.14
 - Input Manager (Old)
 
