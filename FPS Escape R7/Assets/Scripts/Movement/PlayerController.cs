@@ -87,14 +87,11 @@ public class PlayerController : MonoBehaviour
     {
         // Change view angle
         rigidbody.MoveRotation(rigidbody.rotation * Quaternion.Euler(horRotation));
-        camera.transform.Rotate(-verRotation);
-        //if (Math.Abs(cameraEuler.y - 180) < float.Epsilon && Math.Abs(cameraEuler.z - 180) < float.Epsilon)
-        //{
-        //    cameraEuler.y = 0f;
-        //    cameraEuler.z = 0f;
-        //    cameraEuler.x = 89;
-        //}
-        //cameraEuler.x = Math.Clamp(cameraEuler.x, 0, 360);
+
+        // Rotate camera up/down with limit at -90 and 90 degress
+        verRot = Mathf.Clamp(verRot, -90f, 90f);
+        camera.transform.localEulerAngles = new Vector3(-verRot, 
+            camera.transform.localEulerAngles.y, camera.transform.localEulerAngles.z);
     }
 
     private void MovePlayer()
