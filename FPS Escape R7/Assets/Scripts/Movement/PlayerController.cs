@@ -26,15 +26,10 @@ public class PlayerController : MonoBehaviour
     private float mouseVerSensivity = 3f;
     [SerializeField]
     private float mouseHorSensivity = 3f;
-    [SerializeField]
-    private float CameraVerticalUpLimit = -80f;
-    [SerializeField]
-    private float CameraVerticalDownLimit = 85f;
     private float horRot; // Horizontal rotation
     private float verRot; // Vertical rotation
     private Vector3 horRotation = Vector3.zero;
     private Vector3 verRotation = Vector3.zero;
-    private float cameraCurrentRotationValue;
 
     // ---- Unity components ----
     [SerializeField]
@@ -62,22 +57,7 @@ public class PlayerController : MonoBehaviour
         verRot = Input.GetAxis("Mouse Y");
 
         horRotation = new Vector3(0f, horRot, 0f) * mouseHorSensivity;
-        float dY = verRot * mouseVerSensivity;
-        cameraCurrentRotationValue -= dY;
-        if (cameraCurrentRotationValue < CameraVerticalUpLimit)
-        {
-            camera.transform.localEulerAngles = new Vector3(CameraVerticalUpLimit, 0, 0);
-            cameraCurrentRotationValue = CameraVerticalUpLimit;
-            verRotation = Vector3.zero;
-        }
-        else if (cameraCurrentRotationValue > CameraVerticalDownLimit)
-        {
-            print($"euler: {camera.transform.eulerAngles.x}, value: {cameraCurrentRotationValue}");
-            camera.transform.localEulerAngles = new Vector3(CameraVerticalDownLimit, 0, 0);
-            cameraCurrentRotationValue = CameraVerticalDownLimit;
-            verRotation = Vector3.zero;
-        }
-        else verRotation = new Vector3(dY, 0, 0);
+        verRotation = new Vector3(verRot, 0f, 0f) * mouseVerSensivity;
 
         MovePlayer(); // Apply move
         ChangeViewAngle(); // Apply rotation
@@ -90,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
         // Rotate camera up/down with limit at -90 and 90 degress
         verRot = Mathf.Clamp(verRot, -90f, 90f);
-        camera.transform.localEulerAngles = new Vector3(-verRot, 
+        camera.transform.localEulerAngles = new Vector3(-verRot,
             camera.transform.localEulerAngles.y, camera.transform.localEulerAngles.z);
     }
 
