@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // ---- Jump ----
     [SerializeField]
     private float jumpForceCoef = 10f;
+    private bool isJumpButtonClamping = false;
 
     // ---- Rotation ----
     [SerializeField]
@@ -27,9 +29,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float mouseHorSensivity = 3f;
     private float horRot; // Horizontal rotation
-    private float verRot; // Vertical rotation
+    private float verRot = 0; // Vertical rotation
     private Vector3 horRotation = Vector3.zero;
-    private Vector3 verRotation = Vector3.zero;
 
     // ---- Unity components ----
     [SerializeField]
@@ -54,10 +55,9 @@ public class PlayerController : MonoBehaviour
 
         // Calculate rotate angle
         horRot = Input.GetAxis("Mouse X");
-        verRot = Input.GetAxis("Mouse Y");
+        verRot += Input.GetAxis("Mouse Y") * mouseVerSensivity;
 
         horRotation = new Vector3(0f, horRot, 0f) * mouseHorSensivity;
-        verRotation = new Vector3(verRot, 0f, 0f) * mouseVerSensivity;
 
         MovePlayer(); // Apply move
         ChangeViewAngle(); // Apply rotation
@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
         // Jump
         if (IsGrounded() && Input.GetButton("Jump"))
             rigidbody.AddForce(Vector3.up * jumpForceCoef, ForceMode.Impulse);
+        print(IsGrounded().ToString() + ' ' + isJumpButtonClamping.ToString());
     }
 
     // Check, if we're on ground
