@@ -5,29 +5,29 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637794824620337211
-    m_Hash: 212608753
+      ticks: 637797673247088360
+    m_Hash: 3555199376
   m_LockFileStatus:
     m_FilePath: I:/Ela/GAMES/FPS Escape R7/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637794824620527265
-    m_Hash: 3471640928
+      ticks: 637797673247588470
+    m_Hash: 3846200541
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: I:/Ela/GAMES/FPS Escape R7/Packages
-m_EditorVersion: 2021.2.4f1 (99ba6aa4c552)
+m_EditorVersion: 2021.2.10f1 (ee872746220e)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@1.15.1
+- packageId: com.unity.collab-proxy@1.15.7
   testable: 0
   isDirectDependency: 1
-  version: 1.15.1
+  version: 1.15.7
   source: 1
-  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.collab-proxy@1.15.1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.collab-proxy@1.15.7
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -93,8 +93,6 @@ m_ResolvedPackages:
     - 2.1.0-preview.5
     - 2.1.0-preview.6
     compatible:
-    - 1.15.1
-    - 1.15.4
     - 1.15.7
     - 1.15.9
     - 1.15.12
@@ -144,16 +142,16 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637705007780000000
+  datePublishedTicks: 637744672890000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: 44478cbd3117b13beac17ff868e64d0aed5c4071
+    revision: d208594e5483cdf10d303b6ee17df4d6bf58d3de
     path: 
   unityLifecycle:
-    version: 1.15.1
+    version: 1.15.7
     nextVersion: 
 - packageId: com.unity.feature.development@1.0.1
   testable: 0
@@ -209,7 +207,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   - name: com.unity.ide.rider
-    version: 3.0.7
+    version: 3.0.9
   - name: com.unity.ide.vscode
     version: 1.2.4
   - name: com.unity.editorcoroutines
@@ -241,12 +239,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.1
     nextVersion: 
-- packageId: com.unity.ide.rider@3.0.7
+- packageId: com.unity.ide.rider@3.0.9
   testable: 0
   isDirectDependency: 1
-  version: 3.0.7
+  version: 3.0.9
   source: 1
-  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.ide.rider@3.0.7
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.ide.rider@3.0.9
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -292,7 +290,6 @@ m_ResolvedPackages:
     - 3.0.10
     - 3.0.12
     compatible:
-    - 3.0.7
     - 3.0.9
     - 3.0.10
     - 3.0.12
@@ -313,16 +310,16 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637572251600000000
+  datePublishedTicks: 637762012950000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: 3007c42a679bbe2c082c276e8d79279110964553
+    revision: bbc029723f4d157f759dba0f2d438dfcec2e73eb
     path: 
   unityLifecycle:
-    version: 3.0.7
+    version: 3.0.9
     nextVersion: 
 - packageId: com.unity.ide.visualstudio@2.0.14
   testable: 0
@@ -364,7 +361,6 @@ m_ResolvedPackages:
     - 2.0.12
     - 2.0.14
     compatible:
-    - 2.0.11
     - 2.0.12
     - 2.0.14
     verified: 2.0.14
@@ -399,7 +395,7 @@ m_ResolvedPackages:
     revision: 
     path: 
   unityLifecycle:
-    version: 2.0.11
+    version: 2.0.12
     nextVersion: 
 - packageId: com.unity.ide.vscode@1.2.4
   testable: 0
@@ -460,6 +456,92 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.2.4
+    nextVersion: 
+- packageId: com.unity.postprocessing@3.2.0
+  testable: 0
+  isDirectDependency: 1
+  version: 3.2.0
+  source: 1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.postprocessing@3.2.0
+  assetPath: Packages/com.unity.postprocessing
+  name: com.unity.postprocessing
+  displayName: Post Processing
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The post-processing stack (v2) comes with a collection of effects
+    and image filters you can apply to your cameras to improve the visuals of your
+    games.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.7
+    - 0.1.8
+    - 2.0.0-beta
+    - 2.0.1-beta
+    - 2.0.2-preview
+    - 2.0.3-preview
+    - 2.0.5-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 2.0.9-preview
+    - 2.0.10-preview
+    - 2.0.11-preview
+    - 2.0.12-preview
+    - 2.0.13-preview
+    - 2.0.14-preview
+    - 2.0.15-preview
+    - 2.0.16-preview
+    - 2.0.17-preview
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.6
+    - 2.1.7
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 3.0.1
+    - 3.0.3
+    - 3.1.0
+    - 3.1.1
+    - 3.2.0
+    compatible:
+    - 3.2.0
+    verified: 3.2.0
+  dependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637726687760000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Graphics.git
+    revision: b0e3273299e678bccb11e08d28c49d481c731c7e
+    path: 
+  unityLifecycle:
+    version: 3.2.0
     nextVersion: 
 - packageId: com.unity.test-framework@1.1.29
   testable: 0
@@ -720,12 +802,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.0.6
     nextVersion: 
-- packageId: com.unity.timeline@1.6.2
+- packageId: com.unity.timeline@1.6.3
   testable: 0
   isDirectDependency: 1
-  version: 1.6.2
+  version: 1.6.3
   source: 1
-  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.timeline@1.6.2
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.timeline@1.6.3
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -812,7 +894,6 @@ m_ResolvedPackages:
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     compatible:
-    - 1.6.2
     - 1.6.3
     - 1.6.4
     - 1.7.0-pre.1
@@ -851,16 +932,126 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637643657750000000
+  datePublishedTicks: 637703491050000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: d0d66dff04e2ee077546a894ea0af2b750055b32
+    revision: 527d3ba73eae5d77407d8300c31dd62770a7409f
     path: 
   unityLifecycle:
-    version: 1.6.2
+    version: 1.6.3
+    nextVersion: 
+- packageId: com.unity.transport@1.0.0-pre.12
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0-pre.12
+  source: 1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.transport@1.0.0-pre.12
+  assetPath: Packages/com.unity.transport
+  name: com.unity.transport
+  displayName: Unity Transport
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Unity network transport layer - the low-level interface for sending
+    UDP data
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.2.0-preview.4
+    - 0.2.1-preview.1
+    - 0.2.2-preview.2
+    - 0.2.3-preview.0
+    - 0.2.4-preview.0
+    - 0.3.0-preview.6
+    - 0.3.1-preview.4
+    - 0.4.0-preview.3
+    - 0.4.1-preview.1
+    - 0.5.0-preview.5
+    - 0.6.0-preview.7
+    - 0.8.0-preview.8
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0-pre.12
+    compatible:
+    - 0.2.0-preview.4
+    - 0.2.1-preview.1
+    - 0.2.2-preview.2
+    - 0.2.3-preview.0
+    - 0.2.4-preview.0
+    - 0.3.0-preview.6
+    - 0.3.1-preview.4
+    - 0.4.0-preview.3
+    - 0.4.1-preview.1
+    - 0.5.0-preview.5
+    - 0.6.0-preview.7
+    - 0.8.0-preview.8
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0-pre.12
+    verified: 
+  dependencies:
+  - name: com.unity.collections
+    version: 1.1.0
+  - name: com.unity.burst
+    version: 1.6.4
+  - name: com.unity.mathematics
+    version: 1.2.5
+  resolvedDependencies:
+  - name: com.unity.collections
+    version: 1.1.0
+  - name: com.unity.burst
+    version: 1.6.4
+  - name: com.unity.mathematics
+    version: 1.2.5
+  - name: com.unity.test-framework
+    version: 1.1.29
+  - name: com.unity.ext.nunit
+    version: 1.0.6
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637786765630000000
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
@@ -924,12 +1115,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
-- packageId: com.unity.visualscripting@1.7.5
+- packageId: com.unity.visualscripting@1.7.6
   testable: 0
   isDirectDependency: 1
-  version: 1.7.5
+  version: 1.7.6
   source: 1
-  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.visualscripting@1.7.5
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.visualscripting@1.7.6
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -970,7 +1161,6 @@ m_ResolvedPackages:
     - 1.7.6
     - 1.8.0-pre.1
     compatible:
-    - 1.7.5
     - 1.7.6
     verified: 1.7.6
   dependencies:
@@ -997,16 +1187,16 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637702395950000000
+  datePublishedTicks: 637722460580000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 92f3faf93c43d4d12ab8258dedff1ec23db47872
+    revision: 64599611822e37717efdd2fa1a0576e1984155fc
     path: 
   unityLifecycle:
-    version: 1.7.5
+    version: 1.7.6
     nextVersion: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
@@ -2747,6 +2937,380 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 
+    nextVersion: 
+- packageId: com.unity.collections@1.1.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.1.0
+  source: 1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.collections@1.1.0
+  assetPath: Packages/com.unity.collections
+  name: com.unity.collections
+  displayName: Collections
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: A C# collections library providing data structures that can be used
+    in jobs, and optimized by Burst compiler.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.0.9-preview.1
+    - 0.0.9-preview.2
+    - 0.0.9-preview.3
+    - 0.0.9-preview.4
+    - 0.0.9-preview.5
+    - 0.0.9-preview.6
+    - 0.0.9-preview.7
+    - 0.0.9-preview.8
+    - 0.0.9-preview.9
+    - 0.0.9-preview.10
+    - 0.0.9-preview.11
+    - 0.0.9-preview.12
+    - 0.0.9-preview.13
+    - 0.0.9-preview.14
+    - 0.0.9-preview.15
+    - 0.0.9-preview.16
+    - 0.0.9-preview.17
+    - 0.0.9-preview.18
+    - 0.0.9-preview.19
+    - 0.0.9-preview.20
+    - 0.1.0-preview
+    - 0.1.1-preview
+    - 0.2.0-preview.13
+    - 0.3.0-preview.0
+    - 0.4.0-preview.6
+    - 0.5.0-preview.9
+    - 0.5.1-preview.11
+    - 0.5.2-preview.8
+    - 0.6.0-preview.9
+    - 0.7.0-preview.2
+    - 0.7.1-preview.3
+    - 0.8.0-preview.5
+    - 0.9.0-preview.5
+    - 0.9.0-preview.6
+    - 0.11.0-preview.17
+    - 0.12.0-preview.13
+    - 0.14.0-preview.16
+    - 0.15.0-preview.21
+    - 0.17.0-preview.18
+    - 1.0.0-pre.3
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.1.0
+    compatible:
+    - 0.0.9-preview.1
+    - 0.0.9-preview.2
+    - 0.0.9-preview.3
+    - 0.0.9-preview.4
+    - 0.0.9-preview.5
+    - 0.0.9-preview.6
+    - 0.0.9-preview.7
+    - 0.0.9-preview.8
+    - 0.0.9-preview.9
+    - 0.0.9-preview.10
+    - 0.0.9-preview.11
+    - 0.0.9-preview.12
+    - 0.0.9-preview.13
+    - 0.0.9-preview.14
+    - 0.0.9-preview.15
+    - 0.0.9-preview.16
+    - 0.0.9-preview.17
+    - 0.0.9-preview.18
+    - 0.0.9-preview.19
+    - 0.0.9-preview.20
+    - 0.1.0-preview
+    - 0.1.1-preview
+    - 0.2.0-preview.13
+    - 0.3.0-preview.0
+    - 0.4.0-preview.6
+    - 0.5.0-preview.9
+    - 0.5.1-preview.11
+    - 0.5.2-preview.8
+    - 0.6.0-preview.9
+    - 0.7.0-preview.2
+    - 0.7.1-preview.3
+    - 0.8.0-preview.5
+    - 0.9.0-preview.5
+    - 0.9.0-preview.6
+    - 0.11.0-preview.17
+    - 0.12.0-preview.13
+    - 0.14.0-preview.16
+    - 0.15.0-preview.21
+    - 0.17.0-preview.18
+    - 1.0.0-pre.3
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.1.0
+    verified: 
+  dependencies:
+  - name: com.unity.burst
+    version: 1.5.4
+  - name: com.unity.test-framework
+    version: 1.1.29
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.6.4
+  - name: com.unity.mathematics
+    version: 1.2.5
+  - name: com.unity.test-framework
+    version: 1.1.29
+  - name: com.unity.ext.nunit
+    version: 1.0.6
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords:
+  - dots
+  - collections
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637732054150000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/dots.git
+    revision: 0fd34b13aa28ca31a5ebe5960f7e1a4b9b2625ce
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.burst@1.6.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.6.4
+  source: 1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.burst@1.6.4
+  assetPath: Packages/com.unity.burst
+  name: com.unity.burst
+  displayName: Burst
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Burst is a compiler that translates from IL/.NET bytecode to highly
+    optimized native code using LLVM.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.2.4-preview.5
+    - 0.2.4-preview.7
+    - 0.2.4-preview.11
+    - 0.2.4-preview.12
+    - 0.2.4-preview.13
+    - 0.2.4-preview.14
+    - 0.2.4-preview.15
+    - 0.2.4-preview.16
+    - 0.2.4-preview.17
+    - 0.2.4-preview.18
+    - 0.2.4-preview.19
+    - 0.2.4-preview.20
+    - 0.2.4-preview.21
+    - 0.2.4-preview.22
+    - 0.2.4-preview.23
+    - 0.2.4-preview.24
+    - 0.2.4-preview.25
+    - 0.2.4-preview.30
+    - 0.2.4-preview.31
+    - 0.2.4-preview.33
+    - 0.2.4-preview.34
+    - 0.2.4-preview.37
+    - 0.2.4-preview.41
+    - 0.2.4-preview.45
+    - 0.2.4-preview.48
+    - 0.2.4-preview.50
+    - 1.1.0-preview.2
+    - 1.1.0-preview.3
+    - 1.1.0-preview.4
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3-preview.3
+    - 1.2.0-preview.1
+    - 1.2.0-preview.5
+    - 1.2.0-preview.6
+    - 1.2.0-preview.8
+    - 1.2.0-preview.9
+    - 1.2.0-preview.10
+    - 1.2.0-preview.11
+    - 1.2.0-preview.12
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.3.0-preview.1
+    - 1.3.0-preview.2
+    - 1.3.0-preview.3
+    - 1.3.0-preview.4
+    - 1.3.0-preview.5
+    - 1.3.0-preview.6
+    - 1.3.0-preview.7
+    - 1.3.0-preview.8
+    - 1.3.0-preview.9
+    - 1.3.0-preview.10
+    - 1.3.0-preview.11
+    - 1.3.0-preview.12
+    - 1.3.0-preview.13
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.9
+    - 1.4.0-pre.1
+    - 1.4.0-preview.1
+    - 1.4.0-preview.2
+    - 1.4.0-preview.3
+    - 1.4.0-preview.4
+    - 1.4.0-preview.5
+    - 1.4.1-pre.1
+    - 1.4.1-pre.2
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4-preview.1
+    - 1.4.4-preview.2
+    - 1.4.4
+    - 1.4.5
+    - 1.4.6
+    - 1.4.7
+    - 1.4.8
+    - 1.4.9
+    - 1.4.11
+    - 1.5.0-pre.3
+    - 1.5.0-pre.4
+    - 1.5.0-pre.5
+    - 1.5.0
+    - 1.5.1
+    - 1.5.2
+    - 1.5.3
+    - 1.5.4
+    - 1.5.5
+    - 1.5.6-preview.1
+    - 1.5.6
+    - 1.6.0-pre.2
+    - 1.6.0-pre.3
+    - 1.6.0-pre.4
+    - 1.6.0
+    - 1.6.1
+    - 1.6.2
+    - 1.6.3
+    - 1.6.4
+    - 1.7.0-pre.1
+    compatible:
+    - 1.6.4
+    - 1.7.0-pre.1
+    verified: 1.6.4
+  dependencies:
+  - name: com.unity.mathematics
+    version: 1.2.1
+  resolvedDependencies:
+  - name: com.unity.mathematics
+    version: 1.2.5
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637775191250000000
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.6.4
+    nextVersion: 
+- packageId: com.unity.mathematics@1.2.5
+  testable: 0
+  isDirectDependency: 0
+  version: 1.2.5
+  source: 1
+  resolvedPath: I:\Ela\GAMES\FPS Escape R7\Library\PackageCache\com.unity.mathematics@1.2.5
+  assetPath: Packages/com.unity.mathematics
+  name: com.unity.mathematics
+  displayName: Mathematics
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Unity's C# SIMD math library providing vector types and math functions
+    with a shader like syntax.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.0.12-preview.2
+    - 0.0.12-preview.5
+    - 0.0.12-preview.8
+    - 0.0.12-preview.10
+    - 0.0.12-preview.11
+    - 0.0.12-preview.13
+    - 0.0.12-preview.17
+    - 0.0.12-preview.19
+    - 0.0.12-preview.20
+    - 1.0.0-preview.1
+    - 1.0.1
+    - 1.1.0-preview.1
+    - 1.1.0
+    - 1.2.1
+    - 1.2.4
+    - 1.2.5
+    compatible:
+    - 1.2.5
+    verified: 1.2.5
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637719892670000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Unity.Mathematics.git
+    revision: 53b0c4756c3c0dff3746285a8b83e858c26cdb06
+    path: 
+  unityLifecycle:
+    version: 1.2.5
     nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
