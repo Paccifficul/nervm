@@ -4,144 +4,151 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Rigidbody))]
-/// <summary>
-/// Базовый класс управление игрока
-/// </summary>
-public class PlayerController : MonoBehaviour
+namespace Player
 {
-    // ==== ПОЛЯ КЛАССА ====
-    // ---- Скорость ----
-    /// <value>Скорость передвижения</value>
-    private readonly float walkSpeed = 4f;
-    /// <value>Скорость бега</value>
-    private readonly float sprintSpeed = 7f;
-    /// <value>Коэффициент ускорения</value>
-    protected float speedCoef = 1f;
-    /// <value>Финальная скорость</value>
-    private Vector3 finalVelocity = Vector3.zero;
-
-    // ---- Передвижение ----
-    /// <value>Горизонтальная скорость</value>
-    private Vector3 horMove;
-    /// <value>Вертикальная скорость</value>
-    private Vector3 verMove;
-
-    // ---- Прыжок ----
-    [SerializeField]
-    /// <value>Сила прыжка</value>
-    private float jumpForceCoef = 15f;
-
-    // ---- Поворот ----
-    [SerializeField]
-    /// <value>Вертикальная скорость мыши</value>
-    private float mouseVerSensivity = 4f;
-    /// <value>Горизонтальая скорость мыши</value>
-    [SerializeField]
-    private float mouseHorSensivity = 4f;
-    /// <value>Градус поворота по горизонтали</value>
-    private float horRot;
-    /// <value>Градус поворота по вертикали</value>
-    private float verRot = 0;
-    /// <value>Горизонтальны поворот</value>
-    private Vector3 horRotation = Vector3.zero;
-
-    // ---- Компоненты Unity ----
-    /// <value>Камера игрока</value>
-    [SerializeField]
-    private new Camera camera;
-    private new Rigidbody rigidbody;
-
-    // ==== Свойства ====
+    [RequireComponent(typeof(Rigidbody))]
     /// <summary>
-    /// Получаем значение скорости ходьбы
+    /// Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СѓРїСЂР°РІР»РµРЅРёРµ РёРіСЂРѕРєР°
     /// </summary>
-    /// <returns>Возращает значение скорости ходьбы</returns>
-    public float WalkSpeed
+    public class PlayerController : MonoBehaviour
     {
-        get
+        // ==== РџРћР›РЇ РљР›РђРЎРЎРђ ====
+        // ---- РЎРєРѕСЂРѕСЃС‚СЊ ----
+        /// <value>РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґРІРёР¶РµРЅРёСЏ</value>
+        private readonly float walkSpeed = 4f;
+        /// <value>РЎРєРѕСЂРѕСЃС‚СЊ Р±РµРіР°</value>
+        private readonly float sprintSpeed = 7f;
+        /// <value>РљРѕСЌС„С„РёС†РёРµРЅС‚ СѓСЃРєРѕСЂРµРЅРёСЏ</value>
+        protected float speedCoef = 1f;
+        /// <value>Р¤РёРЅР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        private Vector3 finalVelocity = Vector3.zero;
+
+        // ---- РџРµСЂРµРґРІРёР¶РµРЅРёРµ ----
+        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        private Vector3 horMove;
+        /// <value>Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        private Vector3 verMove;
+
+        // ---- РџСЂС‹Р¶РѕРє ----
+        [SerializeField]
+        /// <value>РЎРёР»Р° РїСЂС‹Р¶РєР°</value>
+        private float jumpForceCoef = 15f;
+
+        // ---- РџРѕРІРѕСЂРѕС‚ ----
+        [SerializeField]
+        /// <value>Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РјС‹С€Рё</value>
+        private float mouseVerSensivity = 4f;
+        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РјС‹С€Рё</value>
+        [SerializeField]
+        private float mouseHorSensivity = 4f;
+        /// <value>Р“СЂР°РґСѓСЃ РїРѕРІРѕСЂРѕС‚Р° РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё</value>
+        private float horRot;
+        /// <value>Р“СЂР°РґСѓСЃ РїРѕРІРѕСЂРѕС‚Р° РїРѕ РІРµСЂС‚РёРєР°Р»Рё</value>
+        private float verRot = 0;
+        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹ РїРѕРІРѕСЂРѕС‚</value>
+        private Vector3 horRotation = Vector3.zero;
+
+        // ---- РљРѕРјРїРѕРЅРµРЅС‚С‹ Unity ----
+        /// <value>РљР°РјРµСЂР° РёРіСЂРѕРєР°</value>
+        [SerializeField]
+        private new Camera camera;
+        private new Rigidbody rigidbody;
+
+        // ==== РЎРІРѕР№СЃС‚РІР° ====
+        /// <summary>
+        /// РџРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё С…РѕРґСЊР±С‹
+        /// </summary>
+        /// <returns>Р’РѕР·СЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё С…РѕРґСЊР±С‹</returns>
+        public float WalkSpeed
         {
-            return walkSpeed;
+            get
+            {
+                return walkSpeed;
+            }
+        }
+        /// <summary>
+        /// РџРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё РїСЂРё Р±РµРіРµ
+        /// </summary>
+        /// /// <returns>Р’РѕР·СЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё Р±РµРіР°</returns>
+        public float SprintSpeed
+        {
+            get
+            {
+                return sprintSpeed;
+            }
+        }
+
+        // ==== РњР•РўРћР”Р«/Р¤РЈРќРљР¦РР (С…Р· РєР°Рє РїСЂР°РІРёР»СЊРЅРѕ) ====
+        // Start is called before the first frame update
+        protected void Start()
+        {
+            rigidbody = GetComponent<Rigidbody>();
+        }
+
+        void Update()
+        {
+            if (IsGrounded() && Input.GetButtonDown("Jump"))
+                rigidbody.AddForce(Vector3.up * jumpForceCoef, ForceMode.Impulse);
+            print(IsGrounded());
+        }
+
+        protected void FixedUpdate()
+        {
+            // РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂРѕСЃС‚СЊ
+            horMove = transform.right * Input.GetAxis("Horizontal");
+            verMove = transform.forward * Input.GetAxis("Vertical");
+
+            finalVelocity = CalculateSpeed();
+
+            // РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СѓРіРѕР» РїРѕРІРѕСЂРѕС‚Р°
+            horRot = Input.GetAxis("Mouse X");
+            verRot += Input.GetAxis("Mouse Y") * mouseVerSensivity;
+
+            horRotation = new Vector3(0f, horRot, 0f) * mouseHorSensivity;
+
+            MovePlayer();
+            ChangeViewAngle();
+        }
+
+        /// <summary>
+        /// РџРѕРІРѕСЂРѕС‚ РёРіСЂРѕРєР° РІ СЃС‚РѕСЂРѕРЅСѓ РїСЂРё РїРѕРјРѕС‰Рё rigidbody.
+        /// РџРѕРІРѕСЂРѕС‚ РєР°РјРµСЂС‹, СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј 90 РіСЂР°РґСѓСЃРѕРІ РІРІРµСЂС… Рё РІРЅРёР·
+        /// </summary>
+        private void ChangeViewAngle()
+        {
+            rigidbody.MoveRotation(rigidbody.rotation * Quaternion.Euler(horRotation));
+
+            verRot = Mathf.Clamp(verRot, -90f, 90f);
+            camera.transform.localEulerAngles = new Vector3(-verRot,
+                camera.transform.localEulerAngles.y, camera.transform.localEulerAngles.z);
+        }
+
+        /// <summary>
+        /// РџРµСЂРµРґРІРёРіР°РµРј РёРіСЂРѕРєР°. РџСЂС‹Р¶РѕРє
+        /// </summary>
+        private void MovePlayer()
+        {
+            rigidbody.MovePosition(rigidbody.position + finalVelocity * Time.fixedDeltaTime);
+        }
+
+        /// <summary>
+        /// РџСЂРѕРІРµСЂСЏРµРј, РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РёРіСЂРѕРє РЅР° Р·РµРјР»Рµ РёР»Рё РЅРµС‚
+        /// </summary>
+        /// <returns>РЎС‚РѕРёС‚ Р»Рё РёРіСЂРѕРє РЅР° РїРѕРІРµСЂС…РЅРѕСЃС‚Рё</returns>
+        private bool IsGrounded()
+        {
+            return Physics.Raycast(transform.position, Vector3.down, 1.0f);
+        }
+
+        /// <summary>
+        /// РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂРѕСЃС‚СЊ, СѓС‡РёС‚С‹РІР°СЏ СѓСЃРєРѕСЂРµРЅРёРµ 
+        /// </summary>
+        /// <returns>Р¤РёР»СЊРЅР°РЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РёРіСЂРѕРєР°, РїСЂРѕРІРµСЂСЏСЏ, Р±РµР¶РёС‚ Р»Рё РѕРЅ РёР»Рё РёРґС‘С‚</returns>
+        private Vector3 CalculateSpeed()
+        {
+            if (Input.GetButton("Sprint")) return sprintSpeed * speedCoef * (horMove + verMove).normalized;
+            return walkSpeed * speedCoef * (horMove + verMove).normalized;
         }
     }
-    /// <summary>
-    /// Получаем значение скорости при беге
-    /// </summary>
-    /// /// <returns>Возращает значение скорости бега</returns>
-    public float SprintSpeed
-    {
-        get
-        {
-            return sprintSpeed;
-        }
-    }
 
-    // ==== МЕТОДЫ/ФУНКЦИИ (хз как правильно) ====
-    // Start is called before the first frame update
-    protected void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    protected void FixedUpdate()
-    {
-        // Просчитываем скорость
-        horMove = transform.right * Input.GetAxis("Horizontal");
-        verMove = transform.forward * Input.GetAxis("Vertical");
-
-        finalVelocity = CalculateSpeed();
-
-        // Просчитываем угол поворота
-        horRot = Input.GetAxis("Mouse X");
-        verRot += Input.GetAxis("Mouse Y") * mouseVerSensivity;
-
-        horRotation = new Vector3(0f, horRot, 0f) * mouseHorSensivity;
-
-        MovePlayer(); 
-        ChangeViewAngle();
-    }
-
-    /// <summary>
-    /// Поворот игрока в сторону при помощи rigidbody.
-    /// Поворот камеры, с ограничением 90 градусов вверх и вниз
-    /// </summary>
-    private void ChangeViewAngle()
-    {
-        rigidbody.MoveRotation(rigidbody.rotation * Quaternion.Euler(horRotation));
-
-        verRot = Mathf.Clamp(verRot, -90f, 90f);
-        camera.transform.localEulerAngles = new Vector3(-verRot, 
-            camera.transform.localEulerAngles.y, camera.transform.localEulerAngles.z);
-    }
-
-    /// <summary>
-    /// Передвигаем игрока. Прыжок
-    /// </summary>
-    private void MovePlayer()
-    {
-        rigidbody.MovePosition(rigidbody.position + finalVelocity * Time.fixedDeltaTime);
-
-        if (IsGrounded() && Input.GetButtonDown("Jump"))
-            rigidbody.AddForce(Vector3.up * jumpForceCoef, ForceMode.Impulse);
-    }
-
-    /// <summary>
-    /// Проверяем, находится ли игрок на земле или нет
-    /// </summary>
-    /// <returns>Стоит ли игрок на поверхности</returns>
-    private bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 1.0f);
-    }
-
-    /// <summary>
-    /// Просчитываем скорость, учитывая ускорение 
-    /// </summary>
-    /// <returns>Фильнаная скорость игрока, проверяя, бежит ли он или идёт</returns>
-    private Vector3 CalculateSpeed()
-    {
-        if (Input.GetButton("Sprint")) return sprintSpeed * speedCoef * (horMove + verMove).normalized;
-        return walkSpeed * speedCoef * (horMove + verMove).normalized;
-    }
 }
