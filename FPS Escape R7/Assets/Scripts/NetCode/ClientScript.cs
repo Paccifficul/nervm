@@ -55,9 +55,12 @@ public class ClientScript : NetworkScript
             {
                 uint value = stream.ReadUInt();//Что-то делаем с ними
                 Debug.Log("Got the value = " + value + " back from the server");
-                Done = true;
-                Connection.Disconnect(Driver);
-                Connection = default(NetworkConnection);//Эта штука должны отключить нас от сервера.
+                Driver.BeginSend(Connection, out var writer);
+                writer.WriteUInt(value);
+                Driver.EndSend(writer);
+                //Done = true;
+                //Connection.Disconnect(Driver);
+                //Connection = default(NetworkConnection);//Эта штука должны отключить нас от сервера.
             }
             else if (cmd == NetworkEvent.Type.Disconnect)//Если это отключение от сервера
             {
