@@ -86,8 +86,28 @@ namespace Assets.Scripts.Data
 
         public static TableQuery<T> GetTable<T>() where T : new()
         {
-            connection = new SQLiteConnection("Data Source=" + DBPath);
-            return connection.Table<T>();
+            try
+            {
+                connection = new SQLiteConnection("Data Source=" + DBPath);
+                return connection.Table<T>();
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public static void CreateDatabase()
+        {
+            try
+            {
+                connection = new SQLiteConnection("Data Source=" + DBPath);
+                connection.CreateTable<PlayerData>();
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

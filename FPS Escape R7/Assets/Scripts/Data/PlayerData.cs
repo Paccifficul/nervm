@@ -15,42 +15,42 @@ namespace Assets.Scripts.Data
         /// <summary>
         /// ID игрока, будет нужен для того, чтобы различать игроков (по-сути, как в дс или ещё где-нибудь).
         /// </summary>
-        public ulong ID { get; }
+        public ulong ID { get; set; }
         /// <summary>
         /// Ник игрока, ну с ним всё понятно.
         /// </summary>
-        public string Nickame { get; }
+        public string Nickname { get; set; }
         /// <summary>
         /// Ранг игрока (звание). Пока что хз, что там будет.
         /// </summary>
-        public PlayerRank Rank { get; }
+        public PlayerRank Rank { get; set; }
         //Ну с этими 4 свойствами тоже всё понятно должно быть
 
-        public ulong TotalKills { get; }
+        public ulong TotalKills { get; set; }
 
-        public ulong TotalHeadshots { get; }
+        public ulong TotalHeadshots { get; set; }
 
-        public ulong TotalDeaths { get; }
+        public ulong TotalDeaths { get; set; }
 
-        public ulong TotalAssists { get; }
+        public ulong TotalAssists { get; set; }
 
-        public ulong TotalDamage { get; }
+        public ulong TotalDamage { get; set; }
 
-        public ulong TotalDamageReceived { get; }
+        public ulong TotalDamageReceived { get; set; }
 
         /// <summary>
         /// Это свойство показывает, сколько времени отыграл игрок.
         /// </summary>
-        public TimeSpan TotalPlayTime { get; }
+        public TimeSpan TotalPlayTime { get; set; }
 
-        public uint TotalMatches { get; }
+        public uint TotalMatches { get; set; }
 
-        public GameRegion PlayerRegion { get; }
+        public GameRegion PlayerRegion { get; set; }
 
         public PlayerData(ulong id, string nickname) : this()
         {
             ID = id;
-            Nickame = nickname;
+            Nickname = nickname;
         }
 
         public enum PlayerRank : byte

@@ -365,8 +365,11 @@
 "Assets/Scripts/Data/PlayerData.cs"
 "Assets/Scripts/Movement/PlayerController.cs"
 "Assets/Scripts/NetCode/ClientScript.cs"
+"Assets/Scripts/NetCode/INetRequestHolder.cs"
 "Assets/Scripts/NetCode/NetworkScript.cs"
+"Assets/Scripts/NetCode/NetworkSyncronizer.cs"
 "Assets/Scripts/NetCode/ServerScript.cs"
+"Assets/Scripts/NetCode/Structures.cs"
 -langversion:9.0
 
 /deterministic

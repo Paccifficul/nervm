@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Networking.Transport;
 using Unity.Collections;
+using Assets.Scripts.NetCode;
 
 /// <summary>
 /// Ётот класс € решил сделать как базовый дл€ сервера и клиента.
 /// </summary>
 public class NetworkScript : MonoBehaviour
 {
+    public const byte SuccessServerResponse = 135;//¬ообще не имеет значени€ код ответа, главное, чтобы он означал правильный ответ.
     /// <summary>
     /// —етевой драйвер.
     /// </summary>
