@@ -2,63 +2,62 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Player
 {
     [RequireComponent(typeof(Rigidbody))]
     /// <summary>
-    /// Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СѓРїСЂР°РІР»РµРЅРёРµ РёРіСЂРѕРєР°
+    /// Базовый класс управление игрока
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
-        // ==== РџРћР›РЇ РљР›РђРЎРЎРђ ====
-        // ---- РЎРєРѕСЂРѕСЃС‚СЊ ----
-        /// <value>РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґРІРёР¶РµРЅРёСЏ</value>
+        // ==== ПОЛЯ КЛАССА ====
+        // ---- Скорость ----
+        /// <value>Скорость передвижения</value>
         private readonly float walkSpeed = 4f;
-        /// <value>РЎРєРѕСЂРѕСЃС‚СЊ Р±РµРіР°</value>
+        /// <value>Скорость бега</value>
         private readonly float sprintSpeed = 7f;
-        /// <value>РљРѕСЌС„С„РёС†РёРµРЅС‚ СѓСЃРєРѕСЂРµРЅРёСЏ</value>
+        /// <value>Коэффициент ускорения</value>
         protected float speedCoef = 1f;
-        /// <value>Р¤РёРЅР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        /// <value>Финальная скорость</value>
         private Vector3 finalVelocity = Vector3.zero;
 
-        // ---- РџРµСЂРµРґРІРёР¶РµРЅРёРµ ----
-        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        // ---- Передвижение ----
+        /// <value>Горизонтальная скорость</value>
         private Vector3 horMove;
-        /// <value>Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</value>
+        /// <value>Вертикальная скорость</value>
         private Vector3 verMove;
 
-        // ---- РџСЂС‹Р¶РѕРє ----
+        // ---- Прыжок ----
         [SerializeField]
-        /// <value>РЎРёР»Р° РїСЂС‹Р¶РєР°</value>
+        /// <value>Сила прыжка</value>
         private float jumpForceCoef = 15f;
 
-        // ---- РџРѕРІРѕСЂРѕС‚ ----
+        // ---- Поворот ----
         [SerializeField]
-        /// <value>Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РјС‹С€Рё</value>
+        /// <value>Вертикальная скорость мыши</value>
         private float mouseVerSensivity = 4f;
-        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РјС‹С€Рё</value>
+        /// <value>Горизонтальая скорость мыши</value>
         [SerializeField]
         private float mouseHorSensivity = 4f;
-        /// <value>Р“СЂР°РґСѓСЃ РїРѕРІРѕСЂРѕС‚Р° РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё</value>
+        /// <value>Градус поворота по горизонтали</value>
         private float horRot;
-        /// <value>Р“СЂР°РґСѓСЃ РїРѕРІРѕСЂРѕС‚Р° РїРѕ РІРµСЂС‚РёРєР°Р»Рё</value>
+        /// <value>Градус поворота по вертикали</value>
         private float verRot = 0;
-        /// <value>Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹ РїРѕРІРѕСЂРѕС‚</value>
+        /// <value>Горизонтальны поворот</value>
         private Vector3 horRotation = Vector3.zero;
 
-        // ---- РљРѕРјРїРѕРЅРµРЅС‚С‹ Unity ----
-        /// <value>РљР°РјРµСЂР° РёРіСЂРѕРєР°</value>
+        // ---- Компоненты Unity ----
+        /// <value>Камера игрока</value>
         [SerializeField]
         private new Camera camera;
         private new Rigidbody rigidbody;
 
-        // ==== РЎРІРѕР№СЃС‚РІР° ====
+        // ==== Свойства ====
         /// <summary>
-        /// РџРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё С…РѕРґСЊР±С‹
+        /// Получаем значение скорости ходьбы
         /// </summary>
-        /// <returns>Р’РѕР·СЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё С…РѕРґСЊР±С‹</returns>
+        /// <returns>Возращает значение скорости ходьбы</returns>
         public float WalkSpeed
         {
             get
@@ -67,9 +66,9 @@ namespace Player
             }
         }
         /// <summary>
-        /// РџРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё РїСЂРё Р±РµРіРµ
+        /// Получаем значение скорости при беге
         /// </summary>
-        /// /// <returns>Р’РѕР·СЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё Р±РµРіР°</returns>
+        /// /// <returns>Возращает значение скорости бега</returns>
         public float SprintSpeed
         {
             get
@@ -78,7 +77,7 @@ namespace Player
             }
         }
 
-        // ==== РњР•РўРћР”Р«/Р¤РЈРќРљР¦РР (С…Р· РєР°Рє РїСЂР°РІРёР»СЊРЅРѕ) ====
+        // ==== МЕТОДЫ/ФУНКЦИИ (хз как правильно) ====
         // Start is called before the first frame update
         protected void Start()
         {
@@ -89,18 +88,18 @@ namespace Player
         {
             if (IsGrounded() && Input.GetButtonDown("Jump"))
                 rigidbody.AddForce(Vector3.up * jumpForceCoef, ForceMode.Impulse);
-            print(IsGrounded());
+            // print(IsGrounded());
         }
 
         protected void FixedUpdate()
         {
-            // РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂРѕСЃС‚СЊ
+            // Просчитываем скорость
             horMove = transform.right * Input.GetAxis("Horizontal");
             verMove = transform.forward * Input.GetAxis("Vertical");
 
             finalVelocity = CalculateSpeed();
 
-            // РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СѓРіРѕР» РїРѕРІРѕСЂРѕС‚Р°
+            // Просчитываем угол поворота
             horRot = Input.GetAxis("Mouse X");
             verRot += Input.GetAxis("Mouse Y") * mouseVerSensivity;
 
@@ -109,10 +108,11 @@ namespace Player
             MovePlayer();
             ChangeViewAngle();
         }
+                
 
         /// <summary>
-        /// РџРѕРІРѕСЂРѕС‚ РёРіСЂРѕРєР° РІ СЃС‚РѕСЂРѕРЅСѓ РїСЂРё РїРѕРјРѕС‰Рё rigidbody.
-        /// РџРѕРІРѕСЂРѕС‚ РєР°РјРµСЂС‹, СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј 90 РіСЂР°РґСѓСЃРѕРІ РІРІРµСЂС… Рё РІРЅРёР·
+        /// Поворот игрока в сторону при помощи rigidbody.
+        /// Поворот камеры, с ограничением 90 градусов вверх и вниз
         /// </summary>
         private void ChangeViewAngle()
         {
@@ -124,7 +124,7 @@ namespace Player
         }
 
         /// <summary>
-        /// РџРµСЂРµРґРІРёРіР°РµРј РёРіСЂРѕРєР°. РџСЂС‹Р¶РѕРє
+        /// Передвигаем игрока. Прыжок
         /// </summary>
         private void MovePlayer()
         {
@@ -132,23 +132,22 @@ namespace Player
         }
 
         /// <summary>
-        /// РџСЂРѕРІРµСЂСЏРµРј, РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РёРіСЂРѕРє РЅР° Р·РµРјР»Рµ РёР»Рё РЅРµС‚
+        /// Проверяем, находится ли игрок на земле или нет
         /// </summary>
-        /// <returns>РЎС‚РѕРёС‚ Р»Рё РёРіСЂРѕРє РЅР° РїРѕРІРµСЂС…РЅРѕСЃС‚Рё</returns>
+        /// <returns>Стоит ли игрок на поверхности</returns>
         private bool IsGrounded()
         {
-            return Physics.Raycast(transform.position, Vector3.down, 1.0f);
+            return Physics.Raycast(transform.position, Vector3.down, 0.1f);
         }
 
         /// <summary>
-        /// РџСЂРѕСЃС‡РёС‚С‹РІР°РµРј СЃРєРѕСЂРѕСЃС‚СЊ, СѓС‡РёС‚С‹РІР°СЏ СѓСЃРєРѕСЂРµРЅРёРµ 
+        /// Просчитываем скорость, учитывая ускорение 
         /// </summary>
-        /// <returns>Р¤РёР»СЊРЅР°РЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РёРіСЂРѕРєР°, РїСЂРѕРІРµСЂСЏСЏ, Р±РµР¶РёС‚ Р»Рё РѕРЅ РёР»Рё РёРґС‘С‚</returns>
+        /// <returns>Фильнаная скорость игрока, проверяя, бежит ли он или идёт</returns>
         private Vector3 CalculateSpeed()
         {
             if (Input.GetButton("Sprint")) return sprintSpeed * speedCoef * (horMove + verMove).normalized;
             return walkSpeed * speedCoef * (horMove + verMove).normalized;
         }
     }
-
 }

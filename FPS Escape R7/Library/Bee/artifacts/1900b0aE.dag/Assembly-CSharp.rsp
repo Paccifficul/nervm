@@ -112,7 +112,9 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:Idle
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -324,14 +326,18 @@
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll"
+-r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.collections@1.1.0/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"E:/My projects/CSharp project/nervm/FPS Escape R7/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Networking.Editor.ref.dll"
@@ -363,6 +369,9 @@
 "Assets/Scripts/Data/DatabaseHandler.cs"
 "Assets/Scripts/Data/DataBaseProcessor.cs"
 "Assets/Scripts/Data/PlayerData.cs"
+"Assets/Scripts/IngameScripts/IngameResources.cs"
+"Assets/Scripts/IngameScripts/LifeScript.cs"
+"Assets/Scripts/IngameScripts/PlayRoundScript.cs"
 "Assets/Scripts/Movement/PlayerController.cs"
 "Assets/Scripts/NetCode/ClientScript.cs"
 "Assets/Scripts/NetCode/INetRequestHolder.cs"
@@ -370,6 +379,15 @@
 "Assets/Scripts/NetCode/NetworkSyncronizer.cs"
 "Assets/Scripts/NetCode/ServerScript.cs"
 "Assets/Scripts/NetCode/Structures.cs"
+"Assets/Scripts/SceneLoader/DEMO_loadgamer.cs"
+"Assets/Scripts/SceneLoader/STARTUP.cs"
+"Assets/Scripts/Shooting/AutomaticWeapon.cs"
+"Assets/Scripts/Shooting/MeleeWeapon.cs"
+"Assets/Scripts/Shooting/NonAutomaticWeapon.cs"
+"Assets/Scripts/Shooting/RangedWeapon.cs"
+"Assets/Scripts/Shooting/SemiAutomaticWeapon.cs"
+"Assets/Scripts/Shooting/shootscript.cs"
+"Assets/Scripts/Shooting/Weapon.cs"
 -langversion:9.0
 
 /deterministic

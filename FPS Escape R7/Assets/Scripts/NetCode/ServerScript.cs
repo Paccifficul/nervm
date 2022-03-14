@@ -5,10 +5,6 @@ using UnityEngine.Assertions;
 
 using Unity.Collections;
 using Unity.Networking.Transport;
-using Assets.Scripts.NetCode;
-using static Assets.Scripts.NetCode.NetRequestToken;
-using Assets.Scripts.Data;
-using System;
 
 public class ServerScript : NetworkScript
 {
@@ -58,9 +54,14 @@ public class ServerScript : NetworkScript
             {
                 if (cmd == NetworkEvent.Type.Data)//Тут идёт обработка каких-либо поступающих данных.
                 {
-                    ulong reqId = stream.ReadULong();
-                    RequestType type = (RequestType)stream.ReadInt();
-                    HandleRequest(stream, type, reqId, i);
+                    uint number = stream.ReadUInt();//По сути, это просто пример, надо будет сделать уже непосредственно какие-то действия здесь.
+
+                    Debug.Log("Got " + number + " from the Client adding + 2 to it.");
+                    number += 2;
+
+                    Driver.BeginSend(NetworkPipeline.Null, Connections[i], out var writer);//Тут мы инициализируем поток для отправки ответа.
+                    writer.WriteUInt(number);//Отправляем какие-либо данные.
+                    Driver.EndSend(writer);//Завершаем отправку.
                 }
                 else if (cmd == NetworkEvent.Type.Disconnect)//Если пользователь даёт команду на отключение, отключаем его.
                 {
@@ -68,37 +69,6 @@ public class ServerScript : NetworkScript
                     Connections[i] = default;
                 }
             }
-        }
-    }
-
-    /// <summary>
-    /// По идее, тут нужно как-то обрабатывать поступающие запросы. Надо будет что-нибудь потом с этим сделать.
-    /// </summary>
-    /// <param name="reader"></param>
-    /// <param name="type"></param>
-    /// <param name="id"></param>
-    private void HandleRequest(in DataStreamReader reader, RequestType type, ulong id, int connectionId)
-    {
-        Driver.BeginSend(Connections[connectionId], out var writer);
-        switch (type)
-        {
-            case RequestType.GetPlayerData:
-                {
-                    PlayerData data = DatabaseHandler.GetData(reader.ReadULong());
-                    writer.WriteULong(data.ID);
-                    writer.WriteFixedString32(new FixedString32Bytes(data.Nickname));
-                    writer.WriteInt((int)data.Rank);
-                    writer.WriteULong(data.TotalKills);
-                    writer.WriteULong(data.TotalHeadshots);
-                    writer.WriteULong(data.TotalDeaths);
-                    writer.WriteULong(data.TotalAssists);
-                    writer.WriteULong(data.TotalDamage);
-                    writer.WriteULong(data.TotalDamageReceived);
-                    writer.WriteLong((DateTime.MinValue + data.TotalPlayTime).ToBinary());
-                    writer.WriteUInt(data.TotalMatches);
-                    writer.WriteInt((int)data.PlayerRegion);
-                    break;
-                }
         }
     }
 }

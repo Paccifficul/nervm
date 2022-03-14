@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+ArtifactsDB/
+Artifacts/
+[Aa]rtifactsDB/
+*ArtifactsDB/
+*[Aa]rtifacts*
+FPS Escape R7/Library/ArtifactDB
+FPS Escape R7/Library/ArtifactDB
