@@ -1,0 +1,327 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.10f1 (ee872746220e) revision 15632167'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'ru' Physical Memory: 16163 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2021.2.10f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/user/Documents/FPS Escape R7
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+56370
+Successfully changed project path to: C:/Users/user/Documents/FPS Escape R7
+C:/Users/user/Documents/FPS Escape R7
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 311.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.10f1 (ee872746220e)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.2.10f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/FPS Escape R7/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce MX450 (ID=0x1f97)
+    Vendor:   NVIDIA
+    VRAM:     1928 MB
+    Driver:   27.21.14.6242
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2021.2.10f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2021.2.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2021.2.10f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2021.2.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011966 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 321.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.882 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1883ms)
+		BeginReloadAssembly (207ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1463ms)
+			LoadAssemblies (200ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (312ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (904ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (44ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (321ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (397ms)
+				ProcessInitializeOnLoadMethodAttributes (137ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.029537 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 333.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.257 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5260ms)
+		BeginReloadAssembly (279ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (18ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (4688ms)
+			LoadAssemblies (202ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (912ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (177ms)
+			SetupLoadedEditorAssemblies (3214ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (333ms)
+				BeforeProcessingInitializeOnLoad (323ms)
+				ProcessInitializeOnLoadAttributes (2442ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4499 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 68 unused Assets / (1.4 MB). Loaded Objects now: 4955.
+Memory consumption went from 193.3 MB to 191.9 MB.
+Total: 9.899400 ms (FindLiveObjects: 0.884000 ms CreateObjectMapping: 0.886300 ms MarkObjects: 7.636800 ms  DeleteObjects: 0.490000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.024434 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.135 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3137ms)
+		BeginReloadAssembly (327ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (95ms)
+		EndReloadAssembly (2574ms)
+			LoadAssemblies (187ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (817ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (98ms)
+			SetupLoadedEditorAssemblies (1349ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (37ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (218ms)
+				ProcessInitializeOnLoadAttributes (991ms)
+				ProcessInitializeOnLoadMethodAttributes (78ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4481 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (1.9 MB). Loaded Objects now: 4988.
+Memory consumption went from 191.4 MB to 189.5 MB.
+Total: 5.889500 ms (FindLiveObjects: 0.487000 ms CreateObjectMapping: 0.257300 ms MarkObjects: 4.353800 ms  DeleteObjects: 0.788900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1056123.906224 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt.prefab
+  artifactKey: Guid(aedd4bb62ac8dfd48ae575c52e6e4267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Big Alt.prefab using Guid(aedd4bb62ac8dfd48ae575c52e6e4267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a45a0b01d1819103c5d4cf353075952') in 0.332215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Green).prefab
+  artifactKey: Guid(416b2492ca9d1b140874c7ba41cb3214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Fire/WFX_GazFireBig (Green).prefab using Guid(416b2492ca9d1b140874c7ba41cb3214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9946f2f5730071c7725bed9e934986b') in 0.105635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower.prefab
+  artifactKey: Guid(b8f9e29cc9e6dcf4387b96b6dacc819e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower.prefab using Guid(b8f9e29cc9e6dcf4387b96b6dacc819e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7623a7955bb5d021b05d3c8dcd9b9c3') in 0.049594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Looped.prefab
+  artifactKey: Guid(21f6aea0c9b788c4b9b6275efc33d0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Fire/WFX_FlameThrower Looped.prefab using Guid(21f6aea0c9b788c4b9b6275efc33d0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534a8476ceadb341e21df33b96419eb5') in 0.056064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.782852 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete.prefab
+  artifactKey: Guid(99c73c92ac40473459640b165473206f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Concrete.prefab using Guid(99c73c92ac40473459640b165473206f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64a20eb4742db837f0618da04cb0bee') in 0.088355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood NoCollision.prefab
+  artifactKey: Guid(d39ab699aa314a147969fd483aa55205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Wood NoCollision.prefab using Guid(d39ab699aa314a147969fd483aa55205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cb92620d172d7af4c48e25af69dc971') in 0.048103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact SoftBody.prefab
+  artifactKey: Guid(3b1513bcb86426b4795879be6a128ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact SoftBody.prefab using Guid(3b1513bcb86426b4795879be6a128ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e074a614b4ac340310096dd47df4e1') in 0.045702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Dirt.prefab
+  artifactKey: Guid(56bfc2f4b4a0c534c8ef3d0fd1124c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/WFX_BImpact Dirt.prefab using Guid(56bfc2f4b4a0c534c8ef3d0fd1124c44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f141b131b9f5aa9d774ea4dc0524b8') in 0.046525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.367451 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact SoftBody + Hole.prefab
+  artifactKey: Guid(957385c45b877e645a128e11a3efb2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Bullet Impacts/+ Bullet Hole/WFX_BImpact SoftBody + Hole.prefab using Guid(957385c45b877e645a128e11a3efb2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9b0f8e7154348da703a19866399f04e') in 0.109198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.750396 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Black.prefab
+  artifactKey: Guid(6f8449a4663a4fd44b6140772d4f39f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Smoke/WFX_SmokeGrenade AlphaBlend Black.prefab using Guid(6f8449a4663a4fd44b6140772d4f39f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc00beff03936718198ce3a8223582e') in 0.131038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.726842 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Fire/Gray Smoke/WFX_Fire Natural Circle (Gray Smoke).prefab
+  artifactKey: Guid(dc0674a8a869b5043ab6f4155bdd5b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/Fire/Gray Smoke/WFX_Fire Natural Circle (Gray Smoke).prefab using Guid(dc0674a8a869b5043ab6f4155bdd5b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4496ef2c1b862dfcbb60c0509827ddf') in 0.073243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.366545 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE2.prefab
+  artifactKey: Guid(03a4a1935a9f4454c861dfa0aa6df562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/MuzzleFlashes/FPS/WFX_MF FPS RIFLE2.prefab using Guid(03a4a1935a9f4454c861dfa0aa6df562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20edbd3c13783772467891ae999dbcdc') in 0.063214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 117.802455 seconds.
+  path: Assets/ShootingSound/cannon_02.wav
+  artifactKey: Guid(8401456349c492a489ed90469e317e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/cannon_02.wav using Guid(8401456349c492a489ed90469e317e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11db23144ad9f7839d0b5ccff82fe7a1') in 0.141652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ShootingSound/electronic_01.wav
+  artifactKey: Guid(a245ee5d75348c84a89ffb7992f1dc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/electronic_01.wav using Guid(a245ee5d75348c84a89ffb7992f1dc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '868c6e4ec44658b3f3f4354ae218bdb2') in 0.042332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/ShootingSound/magic_03.wav
+  artifactKey: Guid(5e1a9f876d3dafd47bc6b3dde25135fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/magic_03.wav using Guid(5e1a9f876d3dafd47bc6b3dde25135fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5c40cee475979193c32eb8aa267112') in 0.057505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/ShootingSound/crossbow.wav
+  artifactKey: Guid(d9419ba0bfac1e84a95418ac5851caf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/crossbow.wav using Guid(d9419ba0bfac1e84a95418ac5851caf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ddfebd7a66f9884eb368508e5d3320') in 0.048380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/ShootingSound/laser_01.wav
+  artifactKey: Guid(4310474905e266640852f43bd609a1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/laser_01.wav using Guid(4310474905e266640852f43bd609a1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f4f982e49923705cdb6fab5755a7da8') in 0.042764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/ShootingSound/machine_gun.wav
+  artifactKey: Guid(3061c7b9b32d894478e4126ccce25ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShootingSound/machine_gun.wav using Guid(3061c7b9b32d894478e4126ccce25ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fbb443b20a76b271d0711b07f38a55') in 0.039896 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

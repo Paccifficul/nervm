@@ -1,0 +1,2 @@
+C:\Users\user\Documents\FPS Escape R7\obj\Debug\PhotonChat.csproj.AssemblyReference.cache
+C:\Users\user\Documents\FPS Escape R7\obj\Debug\PhotonChat.csproj.CoreCompileInputs.cache
