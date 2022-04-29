@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Movement/PlayerController.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/NetCode/ClientScript.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/NetCode/NetworkScript.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/NetCode/ServerScript.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Shooting/shootscript.cs" charset="windows-1251" />
+  </component>
+</project>

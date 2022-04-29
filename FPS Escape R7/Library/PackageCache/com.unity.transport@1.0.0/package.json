@@ -1,0 +1,51 @@
+{
+  "name": "com.unity.transport",
+  "displayName": "Unity Transport",
+  "version": "1.0.0",
+  "unity": "2020.3",
+  "unityRelease": "0f1",
+  "description": "Unity network transport layer - the low-level interface for sending UDP data",
+  "dependencies": {
+    "com.unity.collections": "1.2.3",
+    "com.unity.burst": "1.6.4",
+    "com.unity.mathematics": "1.2.5"
+  },
+  "upm": {
+    "changelog": "### Changes\n* Changed version to 1.0.0."
+  },
+  "upmCi": {
+    "footprint": "38407b6505436c019e602001e0267b831314df13"
+  },
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.transport.git",
+    "type": "git",
+    "revision": "6a2ab2aed4ceaaef42b07fdcae1a89d0e09014a4"
+  },
+  "samples": [
+    {
+      "displayName": "Custom Network Interface",
+      "description": "Shows how to build a custom network interface using the INetworkInterface API",
+      "path": "Samples~/CustomNetworkInterface"
+    },
+    {
+      "displayName": "Ping/Pong Sample",
+      "description": "Several samples on the basics of jobs, mainthread setups using the Unity Transport",
+      "path": "Samples~/Ping"
+    },
+    {
+      "displayName": "Pipelines Sample",
+      "description": "Shows how to use Pipeline stages",
+      "path": "Samples~/Pipeline"
+    },
+    {
+      "displayName": "Unity Relay with Unity Transport",
+      "description": "Basic sample on how to use Unity Relay with Unity Transport, your project must depend on com.unity.services.relay",
+      "path": "Samples~/RelayPing"
+    },
+    {
+      "displayName": "Soak Sample",
+      "description": "Shows how to use pipelines and jobs to gather stats and create traffic using Unity Transport",
+      "path": "Samples~/Soaker"
+    }
+  ]
+}
