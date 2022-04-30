@@ -2,6 +2,7 @@
 ------------------------------------------------
 
 ### FPS with realistic mechanics and roles selection
+### Now it's only a prototype of game wqith multiplayer mechanics
 
 ### Required for development:
 - Unity 2021.2.4f1
